@@ -49,7 +49,10 @@ def add():
     cur.execute(sql_cmd,l)
     conn.commit()
     collectdata()
-    addpage.destroy()
+    if not ise:
+        addpage.destroy()
+    else:
+        pass
 
 
 
